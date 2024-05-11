@@ -1,0 +1,40 @@
+project:
+  type: website
+
+website:
+  title: "Blackjack with Reinforcement Learning Strateg - Yifan Hu"
+  sidebar:
+    style: "docked"
+    contents: 
+      - href: index.qmd
+        text: Introduction
+      - href: Models.qmd
+        text: Models
+      - href: Conclusion.qmd
+        text: Conclusion
+      - href: Reference.qmd
+        text: Reference
+    tools:
+      - icon: github
+        menu:
+          - text: Source Code
+            url: https://github.com/hyf112/DSAN-6650-Project.git
+
+format:
+  html:
+    theme: 
+      - lux
+      - custom.scss
+    toc: true
+    toc_float: 
+      collapsed: false
+      smooth_scroll: false
+    code-fold: true
+    code-copy: true
+    code-tools: true
+    code-overflow: wrap
+
+editor: visual
+
+
+

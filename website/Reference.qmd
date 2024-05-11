@@ -1,0 +1,18 @@
+---
+title: "Reference"
+format:
+  html:
+    page-layout: full
+    code-fold: show
+    code-copy: true
+    code-tools: true
+    code-overflow: wrap
+---
+
+- https://gymnasium.farama.org/tutorials/training_agents/blackjack_tutorial/
+
+- https://www.kaggle.com/code/angps95/blackjack-strategy-using-reinforcement-learning
+
+- https://srome.github.io/Train-A-Neural_Net-To-Play-Black-Jack-With-Q-Learning/
+
+- https://cs230.stanford.edu/files_winter_2018/projects/6940282.pdf

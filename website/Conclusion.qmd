@@ -1,0 +1,51 @@
+---
+title: "Conclusion"
+format:
+  html:
+    page-layout: full
+    code-fold: show
+    code-copy: true
+    code-tools: true
+    code-overflow: wrap
+---
+
+The results demonstrate varying efficiencies of different RL methods in the game of Blackjack.
+
+| Method               | Average Payout |
+|----------------------|----------------|
+| MC(On-policy)        | **-0.04703**   |
+| MC(Off-policy)       | -0.08581       |
+| SARSA                | -0.17661       |
+| Q-Learning           | -0.14613       |
+| DQN                  | -0.05446       |
+
+The on-policy Monte Carlo method emerges as the most effective, closely followed by the DQN. The lower performance of off-policy methods in this specific application suggests that the direct learning from actual rewards and states as in on-policy methods aligns better with the game's dynamics. SARSA and off-policy Q-Learning, while generally robust in many scenarios, appear to struggle with optimizing their policies compared to the more straightforward Monte Carlo approaches in the relatively simple and constrained environment of Blackjack. This analysis underscores the importance of selecting an RL strategy that aligns with the specific characteristics and requirements of the environment to maximize learning efficiency and policy effectiveness.
+
+
+### Limitations
+
+1. **Simplicity of Environment**:
+   - The standard Blackjack environment used in these experiments is relatively simple compared to many real-world problems that feature larger state and action spaces, and more complex dynamics. Consequently, the generalizability of these results to more complex or different types of environments may be limited.
+
+2. **Evaluation Metrics**:
+   - The evaluation based solely on average payouts may not fully capture the strategic depth or the risk management aspects of Blackjack. Other metrics such as drawdown, variance of payouts, and strategic flexibility could provide a more comprehensive evaluation of performance.
+
+3. **Policy Robustness**:
+   - The robustness of the policies against different Blackjack rule sets (e.g., variations in deck size, dealer behavior) was not tested. An effective strategy under one set of rules might perform poorly under another.
+
+### Future Prospects
+
+1. **Algorithm Enhancements**:
+   - Future work could explore modifications to these algorithms to better handle exploration, perhaps by integrating methods like Thompson sampling or entropy-based exploration bonuses, which could lead to more robust learning.
+
+2. **Cross-Environment Learning**:
+   - Testing the algorithms in varied environments or on simulated platforms that better mimic the complexities of real-world decision-making could help improve the robustness and applicability of the findings.
+
+3. **Hybrid Models**:
+   - Combining the strengths of different approaches, such as integrating the robust state evaluation of DQN with the on-policy advantages of Monte Carlo methods, could yield better performance and faster convergence.
+
+4. **Advanced Neural Architectures**:
+   - Employing more complex neural networks, such as recurrent neural networks (RNNs) or transformers, might capture the temporal dependencies in more complex versions of Blackjack or similar games better than standard DQNs.
+
+5. **Comprehensive Evaluation Framework**:
+   - Developing a more nuanced evaluation framework that includes multiple performance metrics could provide deeper insights into the strategies' effectiveness and practical utility.
